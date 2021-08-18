@@ -1,5 +1,5 @@
 # ML word engine
-listofwords = ['','']
+listofwords = ['a','']
 while True:
     inp = input(' > ')
     entry = ''
@@ -9,7 +9,7 @@ while True:
         while True:
             entry = listofwords[entrynum]
             if inp in entry:
-                print('entry')
+                print(entry)
 
     except:
         blank = ''
