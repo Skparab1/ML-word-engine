@@ -11,6 +11,9 @@ while True:
             if inp in entry: #finds if one letter is missing at beginning or end
                 print(entry)
 
+            if inp[:4] == entry[:4]:
+                print(entry)
+
             i = 1
             try:
                 while True:
