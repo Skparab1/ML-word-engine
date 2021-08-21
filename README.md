@@ -18,5 +18,6 @@ This is an word engine that will reconstruct words and phrases from letters with
 - Searches for missing letters
 - 
 ![](images/missing_letters.png)
+
 - finds mixed up letters
 ![](images/commonly_mixed_up_letters.png)
