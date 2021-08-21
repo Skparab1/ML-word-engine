@@ -11,6 +11,7 @@ This is an word engine that will reconstruct words and phrases from letters with
 
 # Screenshots
 - Searches inside words
+
 ![](images/inside_searching.png)
 - Searches for missing letters
 ![](images/missing_letters.png)
