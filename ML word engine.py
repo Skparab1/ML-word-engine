@@ -9,14 +9,16 @@ while True:
     inp = input(' > ')
     entry = ''
     entrynum = 0
+    found = ''
     
     try:
         while True:
             entry = listofwords[entrynum]
             if inp in entry: #finds if one letter is missing at beginning or end
                 print(entry)
+                found = found + entry
 
-            if inp[:4] == entry[:4]:
+            if inp[:4] == entry[:4] and not entry in found:
                 print(entry)
 
             i = 1
