@@ -9,6 +9,10 @@ This is an word engine that will reconstruct words and phrases from letters with
 - searches for commonly mixed up letters
 - Will do ML part later
 
+# Screenshots
+- Searches inside words
 ![](images/inside_searching.png)
+- Searches for missing letters
 ![](images/missing_letters.png)
+- finds mixed up letters
 ![](images/commonly_mixed_up_letters.png)
