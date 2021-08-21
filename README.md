@@ -9,4 +9,4 @@ This is an word engine that will reconstruct words and phrases from letters with
 - searches for commonly mixed up letters
 - Will do Ml part later
 
-![](images/screenSHot)
+![](images/inside_searching)
