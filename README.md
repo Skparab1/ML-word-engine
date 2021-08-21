@@ -7,6 +7,6 @@ This is an word engine that will reconstruct words and phrases from letters with
 - searches for part of entry inside words
 - searches for missing letters
 - searches for commonly mixed up letters
-- Will do Ml part later
+- Will do ML part later
 
 ![](images/inside_searching)
