@@ -10,3 +10,4 @@ This is an word engine that will reconstruct words and phrases from letters with
 - Will do ML part later
 
 ![](images/inside_searching.png)
+![](images/missing_letters.png)
