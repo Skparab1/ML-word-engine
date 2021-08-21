@@ -5,8 +5,48 @@ list_pv = ['pause','pay', 'payment', 'PC', 'peace', 'peak', 'peer', 'penalty', '
 list_vz = [ 'village','violate', 'violation', 'violence', 'violent', 'virtually', 'virtue', 'virus', 'visible', 'vision', 'visit', 'visitor', 'visual', 'vital', 'voice', 'volume', 'volunteer', 'vote', 'voter', 'vs', 'vulnerable', 'wage', 'wait', 'wake', 'walk', 'wall', 'wander', 'want', 'war', 'warm', 'warn', 'warning', 'wash', 'waste', 'watch', 'water', 'wave', 'way', 'we', 'weak', 'wealth', 'wealthy', 'weapon', 'wear', 'weather', 'wedding', 'week', 'weekend', 'weekly', 'weigh', 'weight', 'welcome', 'welfare', 'well', 'west', 'western', 'wet', 'what', 'whatever', 'wheel', 'when', 'whenever', 'where', 'whereas', 'whether', 'which', 'while', 'whisper', 'white', 'who', 'whole', 'whom', 'whose', 'why', 'wide', 'widely', 'widespread', 'wife', 'wild', 'will', 'willing', 'win', 'wind', 'window', 'wine', 'wing', 'winner', 'winter', 'wipe', 'wire', 'wisdom', 'wise', 'wish', 'with', 'withdraw', 'within', 'without', 'witness', 'woman', 'wonder', 'wonderful', 'wood', 'wooden', 'word', 'work', 'worker', 'working', 'works', 'workshop', 'world', 'worried', 'worry', 'worth', 'would', 'wound', 'wrap', 'write', 'writer', 'writing', 'wrong', 'yard', 'yeah', 'year', 'yell', 'yellow', 'yes', 'yesterday', 'yet', 'yield', 'you', 'young', 'your', 'yours', 'yourself', 'youth', 'zone', '---']
 listofwords = list_ae + list_ep + list_pv + list_vz
 
+print('\nNew feature! You can enter a number at the end of your entry to specify the length you want')
+
 while True:
-    inp = input(' > ')
+    inp = input('\n > ')
+    inp = inp.replace(' ','')
+
+    num = ''
+    numfinder = -1
+    lastchar = ''
+    less = False
+    more = False
+
+    try:
+        while True:
+            lastchar = inp[numfinder]
+            lastchar = int(lastchar)
+            num = str(lastchar) + num
+            numfinder -= 1
+    except:
+        blank = ''
+
+    if '<' in inp:
+        less = True
+    if '>' in inp:
+        more = True
+
+    inp = inp.replace('0','')
+    inp = inp.replace('1','')
+    inp = inp.replace('2','')
+    inp = inp.replace('3','')
+    inp = inp.replace('4','')
+    inp = inp.replace('5','')
+    inp = inp.replace('6','')
+    inp = inp.replace('7','')
+    inp = inp.replace('8','')
+    inp = inp.replace('9','')
+    inp = inp.replace('<','')
+    inp = inp.replace('<','')
+
+    if not num == '':
+        num = int(num)
+
     entry = ''
     entrynum = 0
     found = ''
@@ -14,18 +54,19 @@ while True:
     try:
         while True:
             entry = listofwords[entrynum]
-            if inp in entry: #finds if one letter is missing at beginning or end
+            if inp in entry and (num == '' or num == len(entry) or (num > len(entry) and less) or (num < len(entry) and more)): #finds if one letter is missing at beginning or end
                 print(entry)
                 found = found + entry
 
-            if inp[:4] == entry[:4] and not entry in found:
+            if inp[:4] == entry[:4] and not entry in found and (num == '' or num == len(entry) or (num > len(entry) and less) or (num < len(entry) and more)):
                 print(entry)
 
             i = 1
             try:
                 while True:
-                    if inp[i:] == entry[i+1:] and inp[:i-1] == entry[i-1]:
+                    if inp[i:] == entry[i+1:] and inp[:i-1] == entry[i-1] and not entry in found and (num == '' or num == len(entry) or (num > len(entry) and less) or (num < len(entry) and more)):
                         print(entry)
+                        found = found + entry
                     i += 1
             except:
                 blank = ''
