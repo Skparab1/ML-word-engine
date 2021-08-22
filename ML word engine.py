@@ -50,22 +50,25 @@ while True:
     entry = ''
     entrynum = 0
     found = ''
+    bestmatches = ''
+    othermatches = ''
     
     try:
-        while True:
+        while inp != '':
             entry = listofwords[entrynum]
-            if inp in entry and (num == '' or num == len(entry) or (num > len(entry) and less) or (num < len(entry) and more)): #finds if one letter is missing at beginning or end
-                print(entry)
+            if inp in entry and (num == '' or num == len(entry) or (len(entry) < num and less) or (len(entry) > num and more)): #finds if one letter is missing at beginning or end
+                bestmatches = bestmatches + '\n' + entry
                 found = found + entry
 
-            if inp[:4] == entry[:4] and not entry in found and (num == '' or num == len(entry) or (num > len(entry) and less) or (num < len(entry) and more)):
-                print(entry)
+            if inp[:4] == entry[:4] and not entry in found and (num == '' or num == len(entry) or (len(entry) < num and less) or (len(entry) > num and more)):
+                othermatches = othermatches + '\n' + entry
+                found = found + entry
 
             i = 1
             try:
                 while True:
-                    if inp[i:] == entry[i+1:] and inp[:i-1] == entry[i-1] and not entry in found and (num == '' or num == len(entry) or (num > len(entry) and less) or (num < len(entry) and more)):
-                        print(entry)
+                    if inp[i:] == entry[i+1:] and inp[:i-1] == entry[i-1] and not entry in found and (num == '' or num == len(entry) or (len(entry) < num and less) or (len(entry) > num and more)):
+                        othermatches = othermatches + '\n' + entry
                         found = found + entry
                     i += 1
             except:
@@ -75,4 +78,8 @@ while True:
 
     except:
         blank = ''
+
+    print('\nBest matches:\n'+bestmatches if bestmatches != '' else "Looks like we didn't find any great matches for your search criteria")
+    print('\nOther matches:\n'+othermatches if othermatches != '' else '')
+    
         
