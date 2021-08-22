@@ -19,6 +19,6 @@ This is an word engine that will reconstruct words and phrases from letters with
 
 <img src="images/missing_letters.png" width="400"> 
 
-- finds mixed up letters
+- finds commonly mixed up letters
 <img src="images/missing_letters.png" width="400"> 
 ![](images/commonly_mixed_up_letters.png)
