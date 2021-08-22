@@ -9,11 +9,11 @@ This is an word engine that will reconstruct words and phrases from letters with
 - searches for commonly mixed up letters
 - Will do ML part later
 
-# Screenshots
+# Features
 
 - Searches inside words
 
-![](images/inside_searching.png)
+<img src="images/inside_searching.png" width="400"> 
 
 - Searches for missing letters
 
