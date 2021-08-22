@@ -6,6 +6,7 @@ list_vz = [ 'village','violate', 'violation', 'violence', 'violent', 'virtually'
 listofwords = list_ae + list_ep + list_pv + list_vz
 
 print('\nNew feature! You can enter a number at the end of your entry to specify the length you want')
+#print('\nNew feature! You can enter two numbers at the end with a : in the middle to specify the part of the word to search')
 
 while True:
     inp = input('\n > ')
