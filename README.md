@@ -22,3 +22,7 @@ This is an word engine that will reconstruct words and phrases from letters with
 - catches commonly mixed up letters
 
 <img src="images/commonly_mixed_up_letters.png" width="100"> 
+
+- Filters best matches
+
+<img src="images/commonly_mixed_up_letters.png" width="100"> 
