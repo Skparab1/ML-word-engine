@@ -13,12 +13,12 @@ This is an word engine that will reconstruct words and phrases from letters with
 
 - Searches inside words
 
-<img src="images/inside_searching.png" width="400"> 
+<img src="images/inside_searching.png" width="100"> 
 
 - Searches for missing letters
 
-<img src="images/missing_letters.png" width="400"> 
+<img src="images/missing_letters.png" width="100"> 
 
 - catches commonly mixed up letters
 
-<img src="images/commonly_mixed_up_letters.png" width="400"> 
+<img src="images/commonly_mixed_up_letters.png" width="100"> 
