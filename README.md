@@ -20,4 +20,5 @@ This is an word engine that will reconstruct words and phrases from letters with
 <img src="images/missing_letters.png" width="400"> 
 
 - catches commonly mixed up letters
+
 <img src="images/commonly_mixed_up_letters.png" width="400"> 
