@@ -29,5 +29,4 @@ This is an word engine that will reconstruct words and phrases from letters with
 
 - Specify and limit length
 
-<img src="images/specify_length.png" width="100"> 
-<img src="images/limit_length.png" width="100"> 
+<img src="images/specify_length.png" width="100"> <img src="images/limit_length.png" width="100"> 
