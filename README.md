@@ -25,4 +25,4 @@ This is an word engine that will reconstruct words and phrases from letters with
 
 - Filters best matches
 
-<img src="images/best_matches.png" width="100"> 
+<img src="images/filter_best.png" width="100"> 
