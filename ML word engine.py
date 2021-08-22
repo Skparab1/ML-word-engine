@@ -6,7 +6,7 @@ list_vz = [ 'village','violate', 'violation', 'violence', 'violent', 'virtually'
 listofwords = list_ae + list_ep + list_pv + list_vz
 
 print('\nNew feature! You can enter a number at the end of your entry to specify the length you want')
-#print('\nNew feature! You can enter two numbers at the end with a : in the middle to specify the part of the word to search')
+print('\nSpecify position: enter two numbers at the end with a : in the middle to specify the part of the word to search')
 
 while True:
     inp = input('\n > ')
@@ -17,6 +17,10 @@ while True:
     lastchar = ''
     less = False
     more = False
+    specifypos = False
+    if ':' in inp:
+        inp.replace(':','')
+        specifypos = True
 
     try:
         while True:
@@ -43,10 +47,11 @@ while True:
     inp = inp.replace('8','')
     inp = inp.replace('9','')
     inp = inp.replace('<','')
-    inp = inp.replace('<','')
+    inp = inp.replace('>','')
 
     if not num == '':
         num = int(num)
+
 
     entry = ''
     entrynum = 0
