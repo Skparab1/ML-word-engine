@@ -26,3 +26,7 @@ This is an word engine that will reconstruct words and phrases from letters with
 - Filters best matches
 
 <img src="images/filter_best.png" width="100"> 
+
+- Specify and limit length
+
+<img src="images/filter_best.png" width="100"> 
