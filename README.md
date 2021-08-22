@@ -17,7 +17,6 @@ This is an word engine that will reconstruct words and phrases from letters with
 
 - Searches for missing letters
 
-![](images/missing_letters.png)
 <img src="images/missing_letters.png" width="400"> 
 
 - finds mixed up letters
