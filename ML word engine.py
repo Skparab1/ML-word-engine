@@ -117,25 +117,33 @@ while True:
     writer.close()
 
     printer = 0
-    if bestmatches != '':
-        print('Best matches                  Other matches\n')
+    if bestmatches != []:
+        print('Best matches                  Other matches\n' if othermatches != [] else 'Best matches')
     else:
-        print('Sorry, we couldn\'t find any great matches for your search')
+        print('\nSorry, we couldn\'t find any great matches for your search\n')
+        print('Other matches:\n' if othermatches != [] else 'Try again with different search critera')
 
-    while True:
+    #print(bestmatches)
+    #print(othermatches)
+
+    breakaway1 = False
+    breakaway2 = False
+
+    while not breakaway1 or not breakaway2:
         try:
-            print(str(bestmatches[printer]), end = '')
+            if not breakaway2:
+                print(str(bestmatches[printer]),end = '')
+            else:
+                print(str(bestmatches[printer]) if printer >= 2 else '\n' + str(bestmatches[printer]))
         except:
-            blank = ''
-        finally:
+            breakaway1 = True
+        try:
+            print((' '*(30-len(bestmatches[printer])) + str(othermatches[printer])) if bestmatches != [] else str(othermatches[printer]))
+        except:
             try:
-                print(' '*(30-len(bestmatches[printer])) + str(othermatches[printer]))
+                print(' '*30 + str(othermatches[printer]) if bestmatches != [] else str(othermatches[printer]))
             except:
-                try:
-                    print(' '*30 + str(othermatches[printer]))
-                except:
-                    break
-
+                breakaway2 = True
         printer += 1
 
    #print('\nBest matches:\n'+bestmatches if bestmatches != '' else ("Looks like we didn't find any great matches for your search criteria" if not adding else ''))
