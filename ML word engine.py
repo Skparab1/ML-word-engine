@@ -81,8 +81,8 @@ while True:
     entry = ''
     entrynum = 0
     found = ''
-    bestmatches = ''
-    othermatches = ''
+    bestmatches = []
+    othermatches = []
     
     try:
         while inp != '' and not adding:
@@ -90,18 +90,18 @@ while True:
             entry = entry.lower()        
             entry = listofwords[entrynum]
             if inp in entry and (num == '' or num == len(entry) or (len(entry) < num and less) or (len(entry) > num and more)): #finds if one letter is missing at beginning or end
-                bestmatches = bestmatches + '\n' + entry
+                bestmatches.append(entry)
                 found = found + entry
 
             if inp[:4] == entry[:4] and not entry in found and (num == '' or num == len(entry) or (len(entry) < num and less) or (len(entry) > num and more)):
-                othermatches = othermatches + '\n' + entry
+                othermatches.append(entry)
                 found = found + entry
 
             i = 1
             try:
                 while True:
                     if inp[i:] == entry[i+1:] and inp[:i-1] == entry[i-1] and not entry in found and (num == '' or num == len(entry) or (len(entry) < num and less) or (len(entry) > num and more)):
-                        othermatches = othermatches + '\n' + entry
+                        othermatches.append(entry)
                         found = found + entry
                     i += 1
             except:
@@ -116,7 +116,29 @@ while True:
     writer['wordbank'] = listofwords
     writer.close()
 
-    print('\nBest matches:\n'+bestmatches if bestmatches != '' else ("Looks like we didn't find any great matches for your search criteria" if not adding else ''))
-    print('\nOther matches:\n'+othermatches if othermatches != '' else '')
+    printer = 0
+    if bestmatches != '':
+        print('Best matches                  Other matches\n')
+    else:
+        print('Sorry, we couldn\'t find any great matches for your search')
+
+    while True:
+        try:
+            print(str(bestmatches[printer]), end = '')
+        except:
+            blank = ''
+        finally:
+            try:
+                print(' '*(30-len(bestmatches[printer])) + str(othermatches[printer]))
+            except:
+                try:
+                    print(' '*30 + str(othermatches[printer]))
+                except:
+                    break
+
+        printer += 1
+
+   #print('\nBest matches:\n'+bestmatches if bestmatches != '' else ("Looks like we didn't find any great matches for your search criteria" if not adding else ''))
+    #print('\nOther matches:\n'+othermatches if othermatches != '' else '')
     
         
