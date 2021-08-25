@@ -120,7 +120,7 @@ while True:
     if bestmatches != []:
         print('Best matches                  Other matches\n' if othermatches != [] else 'Best matches')
     else:
-        print('\nSorry, we couldn\'t find any great matches for your search\n')
+        print('\nSorry, we couldn\'t find any great matches for your search\n' if othermatches != [] else '\nSorry, we couldn\'t find any matches for your search\n' )
         print('Other matches:\n' if othermatches != [] else 'Try again with different search critera')
 
     #print(bestmatches)
